@@ -1,0 +1,7 @@
+1. Each service deploys and scales independently, so updating or restarting one doesn't affect the other.
+
+2. Network calls between services can fail, requiring retry logic, timeouts, health checks, and environment-based service discovery that a monolith never needs.
+
+3. The 2-second timeout in order-service means a slow product-service causes every order request to hang then fail with 503 — a cascading failure.
+
+4. Config via environment variables (III), stateless in-memory processes (VI), port binding per service (VII), and fast restart via restart policy (IX).
